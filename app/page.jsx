@@ -18,6 +18,7 @@ export default async function Home() {
 
   return (
     <div>
+      <h1>Blog</h1>
       {data.contents.map((blog) => (
         <div key={blog.id}>
           <Link href={`blog/${blog.id}`}>
