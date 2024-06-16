@@ -20,7 +20,7 @@ export default async function Home() {
     <div>
       <h1>Blog</h1>
       {data.contents.map((blog) => (
-        <div key={blog.id}>
+        <div className="grid lg:grid-cols-3 px-4 py-4 gap-4" key={blog.id}>
           <Link href={`blog/${blog.id}`}>
             <Card>
               <CardHeader>
