@@ -17,10 +17,9 @@ export default async function Home() {
   });
 
   return (
-    <div>
-      <h1>Blog</h1>
+    <div className="grid lg:grid-cols-3 px-4 py-4 gap-4">
       {data.contents.map((blog) => (
-        <div className="grid lg:grid-cols-3 px-4 py-4 gap-4" key={blog.id}>
+        <div className="flex flex-col h-full" key={blog.id}>
           <Link href={`blog/${blog.id}`}>
             <Card>
               <CardHeader>
