@@ -16,6 +16,7 @@ export default async function Home() {
   const data = await client.get({
     endpoint: "portfolio",
   });
+  //console.log(data);
 
   return (
     <div>
@@ -28,7 +29,7 @@ export default async function Home() {
         {data.contents.map((blog) => (
           <div className="flex flex-col h-full" key={blog.id}>
             <Link href={`blog/${blog.id}`}>
-              <Card className="flex flex-col h-full min-h-[300px] hover:shadow-lg">
+              <Card className="flex flex-col h-full min-h-[400px] hover:shadow-lg">
                 <CardHeader>
                   <Image
                     src={blog.img}
