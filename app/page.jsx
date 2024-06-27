@@ -30,7 +30,12 @@ export default async function Home() {
             <Link href={`blog/${blog.id}`}>
               <Card className="flex flex-col h-full min-h-[300px] hover:shadow-lg">
                 <CardHeader>
-                  <Image src={blog.img} alt="サムネイル画像" />
+                  <Image
+                    src={blog.img}
+                    width={300}
+                    height={200}
+                    alt="サムネイル画像"
+                  />
                 </CardHeader>
                 <CardContent>
                   <CardTitle className="text-2xl">{blog.title}</CardTitle>
