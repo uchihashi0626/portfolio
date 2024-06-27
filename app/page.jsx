@@ -16,7 +16,7 @@ export default async function Home() {
   const data = await client.get({
     endpoint: "portfolio",
   });
-  //console.log(data);
+  console.log(data);
 
   return (
     <div>
