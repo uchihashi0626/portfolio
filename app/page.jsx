@@ -21,7 +21,7 @@ export default async function Home() {
 
   return (
     <div>
-      <h1 className="text-4xl text-center py-24 text-b text-blue-700">
+      <h1 className="text-4xl font-bold text-center py-24 text-b text-blue-700">
         Hi, I'm Ryoto.
         <br />
         I'm majoring in HCI at Meiji Univ.
