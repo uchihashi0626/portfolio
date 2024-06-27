@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
 
 export default async function Home() {
   const data = await client.get({
@@ -18,7 +19,7 @@ export default async function Home() {
 
   return (
     <div>
-      <h1 className="text-4xl text-center py-24 text-b">
+      <h1 className="text-4xl text-center py-24 text-b text-blue-700">
         Hi, I'm Ryoto.
         <br />
         I'm majoring in HCI at Meiji Univ.
@@ -27,13 +28,13 @@ export default async function Home() {
         {data.contents.map((blog) => (
           <div className="flex flex-col h-full" key={blog.id}>
             <Link href={`blog/${blog.id}`}>
-              <Card className="flex flex-col h-full min-h-[300px]">
+              <Card className="flex flex-col h-full min-h-[300px] hover:shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-2xl">{blog.title}</CardTitle>
-                  <CardDescription>Card Description</CardDescription>
+                  <Image src={blog.img} alt="サムネイル画像" />
                 </CardHeader>
                 <CardContent>
-                  <p>Card Content</p>
+                  <CardTitle className="text-2xl">{blog.title}</CardTitle>
+                  <CardDescription>Card Description</CardDescription>
                 </CardContent>
                 <CardFooter>
                   <p>Card Footer</p>
