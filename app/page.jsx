@@ -11,12 +11,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
+import parse from "html-react-parser";
 
 export default async function Home() {
   const data = await client.get({
     endpoint: "portfolio",
   });
-  console.log(data);
+
+  console.log(data); // デバッグ用に追加
 
   return (
     <div>
@@ -26,55 +28,55 @@ export default async function Home() {
         I'm majoring in HCI at Meiji Univ.
       </h1>
       <div className="grid lg:grid-cols-3 px-4 py-4 gap-4 mx-36">
-        {data.contents.map((blog) => (
-          <div className="flex flex-col h-full" key={blog.id}>
-            <Link href={`blog/${blog.id}`}>
-              <Card className="flex flex-col h-full min-h-[400px] hover:shadow-lg">
-                <CardHeader>
-                  <Image
-                    src={blog.img}
-                    width={300}
-                    height={200}
-                    alt="サムネイル画像"
-                  />
-                </CardHeader>
-                <CardContent>
-                  <CardTitle className="text-2xl">{blog.title}</CardTitle>
-                  <CardDescription>Card Description</CardDescription>
-                </CardContent>
-                <CardFooter>
-                  <p>Card Footer</p>
-                </CardFooter>
-              </Card>
-            </Link>
-          </div>
-        ))}
+        {data.contents.map((blog) => {
+          // bodyの中のimgタグをパースして画像URLを抽出
+          const parsedBody = parse(blog.body);
+          let imgUrl = "";
+          if (Array.isArray(parsedBody)) {
+            parsedBody.forEach((node) => {
+              if (
+                node.type === "figure" &&
+                node.props.children &&
+                Array.isArray(node.props.children)
+              ) {
+                node.props.children.forEach((child) => {
+                  if (child.type === "img") {
+                    imgUrl = child.props.src;
+                  }
+                });
+              }
+            });
+          }
+
+          return (
+            <div className="flex flex-col h-full" key={blog.id}>
+              <Link href={`blog/${blog.id}`}>
+                <Card className="flex flex-col h-full min-h-[300px] hover:shadow-lg">
+                  <CardHeader>
+                    {imgUrl ? (
+                      <Image
+                        src={imgUrl}
+                        width={300}
+                        height={200}
+                        alt="サムネイル画像"
+                      />
+                    ) : (
+                      <p>画像が見つかりません</p>
+                    )}
+                  </CardHeader>
+                  <CardContent>
+                    <CardTitle className="text-2xl">{blog.title}</CardTitle>
+                    <CardDescription>Card Description</CardDescription>
+                  </CardContent>
+                  <CardFooter>
+                    <p>Card Footer</p>
+                  </CardFooter>
+                </Card>
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 }
-
-// export const generateStaticParams = async () => {
-//   const data = await client.get({ endpoint: "portfolio" });
-//   console.log(data);
-//   return {
-//     props: {
-//       portfolio: data.contents,
-//     },
-//   };
-// };
-
-// export default function Home({ portfolio }) {
-//   return (
-//     <div>
-//       {portfolio.map((portfolio) => (
-//         <li key={portfolio.id}>
-//           <Link href={`portfolio/${portfolio.id}`}>
-//             <a href="">{portfolio.title}</a>
-//           </Link>
-//         </li>
-//       ))}
-//     </div>
-//   );
-//   console.log("テスト");
-// }
