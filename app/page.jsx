@@ -30,7 +30,7 @@ export default async function Home() {
         {data.contents.map((blog) => (
           <div className="flex flex-col h-full" key={blog.id}>
             <Link href={`blog/${blog.id}`}>
-              <Card className="flex flex-col h-full min-h-[400px] hover:shadow-lg">
+              <Card className="flex flex-col h-full max-h-[400px] hover:shadow-lg">
                 <CardHeader>
                   <Image
                     src={blog.img}
@@ -40,7 +40,7 @@ export default async function Home() {
                   />
                 </CardHeader>
                 <CardContent>
-                  <CardTitle className="text-2xl">{blog.title}</CardTitle>
+                  <CardTitle className="text-2xl ">{blog.title}</CardTitle>
                   <CardDescription>Card Description</CardDescription>
                 </CardContent>
                 <CardFooter>
