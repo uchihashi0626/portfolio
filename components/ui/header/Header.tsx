@@ -1,20 +1,26 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
+import Menu from "@/components/Menu";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center mt-5 mx-36">
-      <Link href={"/"}>
-        <h1 className="text-xl hover:text-blue-700">Ryoto Uchihashi</h1>
-      </Link>
-      <div className="flex gap-5 ">
-        <Link className="hover:text-blue-700" href={"/"}>
-          Work
+    <div className="container mx-auto">
+      <motion.header
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ type: "spring", duration: 1, delay: 0.2, stiffness: 120 }}
+        className="flex justify-between items-center h-16   text-neutral-700"
+      >
+        <Link href={"/"}>
+          <h1 className="text-xl hover:text-blue-700 font-bold ">
+            Ryoto Uchihashi
+          </h1>
         </Link>
-        <Link className="hover:text-blue-700" href={"#"}>
-          About
-        </Link>
-      </div>
+        <Menu />
+      </motion.header>
     </div>
   );
 };

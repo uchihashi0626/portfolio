@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/header/Header";
+import Footer from "@/components/Footer";
 
 const Noto = Noto_Sans_JP({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={Noto.className}>
-        <Header /> {children}
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
