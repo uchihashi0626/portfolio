@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import ThreeModel from "@/components/ThreeModel";
 import { getNewsList } from "@/lib/microcms";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
-
+export const revalidate = 60;
 export default async function Home() {
   const data = await getNewsList({ limit: TOP_NEWS_LIMIT });
   //const sliceData_tutorial = data_tutorial.contents.slice(0, 2);
