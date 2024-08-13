@@ -21,7 +21,24 @@ export default function NewsList({ news }: Props) {
             href={`/news/${article.id}`}
             className="flex items-center gap-10 py-6"
           >
-            <Image src="/no-image.png" alt="noimage" width={200} height={200} />
+            {article.thumbnail ? (
+              <Image
+                src={article.thumbnail.url}
+                alt=""
+                className=""
+                width={200}
+                height={200}
+              />
+            ) : (
+              <Image
+                className=""
+                src="/no-image.png"
+                alt="No Image"
+                width={200}
+                height={200}
+              />
+            )}
+
             <dl className="text-neutral-600">
               <dt className="text-xl font-bold">{article.title} </dt>
 

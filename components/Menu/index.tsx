@@ -30,14 +30,14 @@ export default function Menu() {
   return (
     <div>
       <nav className="gap-12 hidden sm:flex">
-        <Link className="hover:text-blue-700" href={"/work"}>
-          Work
-        </Link>
-        <Link className="hover:text-blue-700" href={"/about"}>
-          About
+        <Link className="hover:text-blue-700" href={"/news"}>
+          ニュース
         </Link>
         <Link className="hover:text-blue-700" href={"/members"}>
-          Members
+          メンバー
+        </Link>
+        <Link className="hover:text-blue-700" href={"/form"}>
+          お問い合わせ
         </Link>
       </nav>
 

@@ -6,6 +6,6 @@ type Props = {
 };
 export default function Category({ category }: Props) {
   return (
-    <span className="bg-neutral-200 py-3 px-2 rounded">{category.name}</span>
+    <span className="bg-neutral-200 py-2 px-2 rounded">{category.name}</span>
   );
 }

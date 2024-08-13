@@ -1,3 +1,4 @@
+"use client";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
@@ -45,7 +46,7 @@ const ThreeModel = () => {
         position={[4, 2.5, 1.4]}
         rotation={[0, 0, Math.PI / 6]}
       />
-      <OrbitControls enableZoom={false} />
+      <OrbitControls enabled={false} enableZoom={false} />
     </Canvas>
   );
 };
