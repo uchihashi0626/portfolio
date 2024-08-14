@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://portfolio-zeta-ten-89.vercel.app/sitemap.xml
