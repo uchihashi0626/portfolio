@@ -36,7 +36,7 @@ export default function Menu() {
         <Link className="hover:text-blue-700" href={"/members"}>
           メンバー
         </Link>
-        <Link className="hover:text-blue-700" href={"/form"}>
+        <Link className="hover:text-blue-700" href={"/contact"}>
           お問い合わせ
         </Link>
       </nav>
