@@ -23,7 +23,7 @@ export default async function Page({ params, searchParams }: Props) {
     <div className="">
       <Article data={data} />
       <div className=" flex justify-center mt-12  ">
-        <ButtonLink href="/news">ニュース一覧へ</ButtonLink>
+        <ButtonLink href="/">一覧へ戻る</ButtonLink>
       </div>
     </div>
   );

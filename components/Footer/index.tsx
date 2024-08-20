@@ -6,10 +6,22 @@ export default function Footer() {
       <nav className="mb-4">
         <ul className="flex justify-center gap-10 whitespace-nowrap">
           <li className="">
-            <a href="/news">X</a>
+            <a
+              href="https://x.com/ryoto_FMS"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              X
+            </a>
           </li>
           <li className="">
-            <a href="/members">Github</a>
+            <a
+              href="https://github.com/uchihashi0626"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
           </li>
         </ul>
       </nav>
