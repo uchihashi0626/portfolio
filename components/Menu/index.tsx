@@ -29,15 +29,15 @@ export default function Menu() {
 
   return (
     <div>
-      <nav className="gap-12 hidden sm:flex">
-        <Link className="hover:text-blue-700" href={"/news"}>
-          ニュース
+      <nav className="gap-12 hidden sm:flex ">
+        <Link className="hover:text-blue-700" href={"/"}>
+          Work
         </Link>
-        <Link className="hover:text-blue-700" href={"/members"}>
-          メンバー
+        <Link className="hover:text-blue-700" href={"/about"}>
+          About
         </Link>
         <Link className="hover:text-blue-700" href={"/contact"}>
-          お問い合わせ
+          Contact
         </Link>
       </nav>
 
@@ -72,7 +72,7 @@ export default function Menu() {
           </Link>
           <Link
             className="hover:text-blue-700 text-xl"
-            href={"/members"}
+            href={"/contact"}
             onClick={toggleMenu}
           >
             Members

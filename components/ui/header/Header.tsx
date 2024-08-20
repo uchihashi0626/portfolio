@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto max-w-[1400px] ">
       <motion.header
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

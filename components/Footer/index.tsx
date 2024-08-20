@@ -6,17 +6,14 @@ export default function Footer() {
       <nav className="mb-4">
         <ul className="flex justify-center gap-10 whitespace-nowrap">
           <li className="">
-            <a href="/news">ニュース</a>
+            <a href="/news">X</a>
           </li>
           <li className="">
-            <a href="/members">メンバー</a>
-          </li>
-          <li className="">
-            <a href="/contact">お問い合わせ</a>
+            <a href="/members">Github</a>
           </li>
         </ul>
       </nav>
-      <p className="">© SIMPLE. All Rights Reserved 2024</p>
+      <p className="">©︎ 2024 Ryoto Uchihashi</p>
     </footer>
   );
 }

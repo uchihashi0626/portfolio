@@ -4,6 +4,14 @@ import { News } from "@/lib/microcms";
 import Category from "@/components/Category";
 import Date from "@/components/Date";
 import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 type Props = {
   news: News[];
