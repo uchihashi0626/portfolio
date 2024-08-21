@@ -25,11 +25,8 @@ export default function WorkList({ news }: Props) {
     <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3">
       {news.map((article) => (
         <li key={article.id}>
-          <Link
-            href={`/news/${article.id}`}
-            className="flex items-center gap-10 py-6 justify-center"
-          >
-            <Card className="w-[400px] h-[400px] relative rounded-md hover:bg-blue-50 ">
+          <Card className="w-[400px] h-[400px] relative rounded-md hover:bg-blue-50 ">
+            <Link href={`/news/${article.id}`} className=" ">
               <CardHeader>
                 <div className="-mx-6 -mt-6 h-[200px] relative ">
                   {article.thumbnail ? (
@@ -64,8 +61,8 @@ export default function WorkList({ news }: Props) {
                   くわしく見る<span className="ml-2 text-sm">→</span>
                 </p>
               </CardFooter>
-            </Card>
-          </Link>
+            </Link>
+          </Card>
         </li>
       ))}
     </ul>

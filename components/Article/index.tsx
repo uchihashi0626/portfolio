@@ -29,7 +29,7 @@ export default function Article({ data }: Props) {
         />
       )}
       <div
-        className="leading-relaxed"
+        className="leading-loose"
         dangerouslySetInnerHTML={{
           __html: data.content,
         }}
