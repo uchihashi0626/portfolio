@@ -24,9 +24,12 @@ export default function WorkList({ news }: Props) {
   return (
     <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3">
       {news.map((article) => (
-        <li key={article.id}>
+        <li
+          key={article.id}
+          className="flex items-center gap-10 py-6 justify-center"
+        >
           <Card className="w-[400px] h-[400px] relative rounded-md hover:bg-blue-50 ">
-            <Link href={`/news/${article.id}`} className=" ">
+            <Link href={`/news/${article.id}`}>
               <CardHeader>
                 <div className="-mx-6 -mt-6 h-[200px] relative ">
                   {article.thumbnail ? (
