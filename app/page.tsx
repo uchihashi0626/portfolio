@@ -5,6 +5,7 @@ import ThreeModel from "@/components/ThreeModel";
 import { getNewsList } from "@/lib/microcms";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import WorkList from "@/components/WorkList";
+import { ReactTyped } from "react-typed";
 export const revalidate = 60;
 export default async function Home() {
   const data = await getNewsList({ limit: TOP_NEWS_LIMIT });
