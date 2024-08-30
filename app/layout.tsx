@@ -12,12 +12,10 @@ export const metadata: Metadata = {
     template: "%s | Ryoto Uchihashi - Portfolio",
     default: "Ryoto Uchihashi - Portfolio",
   },
-  description:
-    "「Next.js+ヘッドレスCMSではじめる! かんたん・モダンwebサイト制作入門」で作成されるサイトです。",
+  description: "Ryoto Uchihashiのポートフォリオサイトです。",
   openGraph: {
     title: "Ryoto Uchihashi - Portfolio",
-    description:
-      "「Next.js+ヘッドレスCMSではじめる! かんたん・モダンwebサイト制作入門」で作成されるサイトです。",
+    description: "Ryoto Uchihashiのポートフォリオサイトです。",
 
     images: ["/ogp.png"],
   },
