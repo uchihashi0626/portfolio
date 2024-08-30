@@ -3,6 +3,7 @@ import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/header/Header";
 import Footer from "@/components/Footer";
+import MouseStalker from "../components/MouseStalker";
 
 const Noto = Noto_Sans_JP({ subsets: ["latin"] });
 
@@ -31,7 +32,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={Noto.className}>
+      <body className={Noto.className} style={{ backgroundColor: "white" }}>
+        <MouseStalker />
         <Header />
         {children}
         <Footer />
