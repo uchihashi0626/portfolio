@@ -1,5 +1,5 @@
 import ContactForm from "@/components/ContactForm";
-export const revalidate = 60;
+
 export default function Page() {
   return (
     <div className="">
