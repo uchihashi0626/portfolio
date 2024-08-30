@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Ryoto Uchihashi - Portfolio",
     description: "Ryoto Uchihashiのポートフォリオサイトです。",
 
-    images: ["/ogp.png"],
+    images: ["/image.png"],
   },
   alternates: {
     canonical: "https://portfolio-zeta-ten-89.vercel.app/",
