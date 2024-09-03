@@ -6,6 +6,7 @@ import { getNewsList } from "@/lib/microcms";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import WorkList from "@/components/WorkList";
 import { ReactTyped } from "react-typed";
+import TSTutorial from "@/components/TSTutorial";
 export const revalidate = 60;
 export default async function Home() {
   const data = await getNewsList({ limit: TOP_NEWS_LIMIT });
@@ -39,6 +40,7 @@ export default async function Home() {
       <div className="h-[500px] w-full flex justify-center">
         <ThreeModel />
       </div>
+      <TSTutorial />
     </div>
   );
 }

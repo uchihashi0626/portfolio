@@ -13,16 +13,46 @@ export const metadata: Metadata = {
     template: "%s | Ryoto Uchihashi - Portfolio",
     default: "Ryoto Uchihashi - Portfolio",
   },
-  description: "Ryoto Uchihashiのポートフォリオサイトです。",
+  description:
+    "Ryoto Uchihashiのスキルやプロジェクトを紹介するポートフォリオサイトです。Web開発、デザイン、UI/UXに関する実績をチェックしてください。",
   openGraph: {
+    title: "Ryoto Uchihashi - ポートフォリオ",
+    description:
+      "Ryoto Uchihashiのスキルやプロジェクトを紹介するポートフォリオサイトです。",
+    url: "https://portfolio-zeta-ten-89.vercel.app/",
+    images: [
+      {
+        url: "/image.png",
+        width: 800,
+        height: 600,
+        alt: "Ryoto Uchihashi Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
     title: "Ryoto Uchihashi - Portfolio",
-    description: "Ryoto Uchihashiのポートフォリオサイトです。",
-
+    description: "Ryoto Uchihashiのポートフォリオサイト。",
     images: ["/image.png"],
   },
   alternates: {
     canonical: "https://portfolio-zeta-ten-89.vercel.app/",
+    languages: {
+      ja: "https://portfolio-zeta-ten-89.vercel.app/ja",
+    },
   },
+  viewport: "width=device-width, initial-scale=1.0",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: [
+    "Ryoto Uchihashi",
+    "ポートフォリオ",
+    "Web開発",
+    "デザイン",
+    "UI/UX",
+  ],
 };
 
 export default function RootLayout({
