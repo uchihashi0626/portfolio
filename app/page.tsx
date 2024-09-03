@@ -40,7 +40,7 @@ export default async function Home() {
       <div className="h-[500px] w-full flex justify-center">
         <ThreeModel />
       </div>
-      <TSTutorial />
+      {/* <TSTutorial /> */}
     </div>
   );
 }
