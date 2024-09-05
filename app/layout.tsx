@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/ui/header/Header";
 import Footer from "@/components/Footer";
 import MouseStalker from "../components/MouseStalker";
+import { Suspense } from "react";
 
 const Noto = Noto_Sans_JP({ subsets: ["latin"] });
 
@@ -63,10 +64,12 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={Noto.className} style={{ backgroundColor: "white" }}>
-        <MouseStalker />
-        <Header />
-        {children}
-        <Footer />
+        <Suspense fallback={<></>}>
+          <MouseStalker />
+          <Header />
+          {children}
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );
