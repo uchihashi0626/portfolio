@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   },
   description:
     "Ryoto Uchihashiのスキルやプロジェクトを紹介するポートフォリオサイトです。Web開発、デザイン、UI/UXに関する実績をチェックしてください。",
+  verification: {
+    google:
+      '<meta name="google-site-verification" content="zGOEmDHFolR0q43-JJWkkcs86IwHwC3zkofMGxYR2pA" />',
+  },
   openGraph: {
     title: "Ryoto Uchihashi - ポートフォリオ",
     description:
@@ -64,12 +68,10 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={Noto.className} style={{ backgroundColor: "white" }}>
-        <Suspense fallback={<></>}>
-          <MouseStalker />
-          <Header />
-          {children}
-          <Footer />
-        </Suspense>
+        <MouseStalker />
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
